@@ -1,0 +1,21 @@
+--- a/variants/promicro/variant.h
++++ b/variants/promicro/variant.h
+@@ -86,5 +86,5 @@
+ #define SX126X_POWER_EN           (21)
+-#define SX126X_RXEN               (2)
++#define SX126X_RXEN               (-1) // XD6500SHT test, P0.17 is NOT RXEN
+ #define SX126X_TXEN               (-1)
+ #define SX126X_DIO2_AS_RF_SWITCH  true
+ #define SX126X_DIO3_TCXO_VOLTAGE  (1.8f)
+--- a/variants/promicro/PromicroBoard.cpp
++++ b/variants/promicro/PromicroBoard.cpp
+@@ -20,3 +20,9 @@
+     pinMode(SX126X_POWER_EN, OUTPUT);
+     digitalWrite(SX126X_POWER_EN, HIGH);
++
++    // EXPERIMENTAL: keep possible XD6500SHT SW_CTRL on Arduino pin 2 HIGH.
++    // Radio DIO2 still switches RX and TX; DIO3 drives TCXO at 1.8 V.
++    constexpr uint8_t XD6500SHT_SW_CTRL_PIN = 2;
++    digitalWrite(XD6500SHT_SW_CTRL_PIN, HIGH);
++    pinMode(XD6500SHT_SW_CTRL_PIN, OUTPUT);
+     delay(10);   // give sx1262 some time to power up
