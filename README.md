@@ -13,6 +13,8 @@ Download the Nordic nRF52 DFU ZIP files from [Releases](https://github.com/VoxMe
 
 These builds are intended only for matching ProMicro + XD6500SHT hardware with a compatible DFU bootloader. Set a unique repeater admin password before deployment.
 
+Test results: [GitHub Issue #2](https://github.com/VoxMesh/MeshCore-XD6500SHT/issues/2).
+
 ## Source
 
 Based on [MeshCore commit `81dbae592ffad40b4212bc0b37e82b38da08f4bc`](https://github.com/meshcore-dev/MeshCore/tree/81dbae592ffad40b4212bc0b37e82b38da08f4bc).
