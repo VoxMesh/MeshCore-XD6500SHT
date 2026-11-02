@@ -28,3 +28,5 @@ pio run -e ProMicro_repeater
 ```
 
 Based on [MeshCore](https://github.com/meshcore-dev/MeshCore), licensed under [MIT](LICENSE).
+
+Related Meshtastic firmware: [Meshtastic-XD6500SHT](https://github.com/VoxMesh/Meshtastic-XD6500SHT).
